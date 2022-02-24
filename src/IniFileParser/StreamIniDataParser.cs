@@ -50,6 +50,14 @@ namespace IniParser
             return Parser.Parse(reader.ReadToEnd());
         }
 
+        public IniData ReadData(string readering)
+        {
+            if (readering == null)
+                throw new ArgumentNullException("reader");
+
+            return Parser.Parse(readering);
+        }
+
         /// <summary>
         ///     Writes the ini data to a stream.
         /// </summary>

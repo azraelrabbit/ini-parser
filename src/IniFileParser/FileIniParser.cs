@@ -73,13 +73,15 @@ namespace IniParser
             {
                 // (FileAccess.Read) we want to open the ini only for reading 
                 // (FileShare.ReadWrite) any other process should still have access to the ini file 
-                using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-                {
-                    using (StreamReader sr = new StreamReader(fs, fileEncoding))
-                    {
-                        return ReadData(sr);
-                    }
-                }
+                //using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
+                //{
+                //    using (StreamReader sr = new StreamReader(fs, fileEncoding))
+                //    {
+                //        return ReadData(sr);
+                //    }
+                //}
+
+               return ReadData( File.ReadAllText(filePath, fileEncoding));
             }
             catch (IOException ex)
             {
@@ -131,13 +133,15 @@ namespace IniParser
             if (parsedData == null)
                 throw new ArgumentNullException("parsedData");
 
-            using (FileStream fs = File.Open(filePath, FileMode.Create, FileAccess.Write))
-            {
-                using (StreamWriter sr = new StreamWriter(fs, fileEncoding))
-                {
-                    WriteData(sr, parsedData);
-                }
-            }
+            //using (FileStream fs = File.Open(filePath, FileMode.Create, FileAccess.Write))
+            //{
+            //    using (StreamWriter sr = new StreamWriter(fs, fileEncoding))
+            //    {
+            //        WriteData(sr, parsedData);
+            //    }
+            //}
+
+            File.WriteAllText(filePath, parsedData.ToString(),fileEncoding);
         }
     }
 }

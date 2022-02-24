@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IniParser.Tests", "IniParse
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IniParser.Example", "IniParser.Example\IniParser.Example.csproj", "{D4CF6996-5C75-46D1-A75B-22731ED16058}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INIFileParser.FX", "IniFileParser\INIFileParser.FX.csproj", "{3DB466DB-836F-4CBF-85D1-DEC168463BE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D4CF6996-5C75-46D1-A75B-22731ED16058}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4CF6996-5C75-46D1-A75B-22731ED16058}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4CF6996-5C75-46D1-A75B-22731ED16058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB466DB-836F-4CBF-85D1-DEC168463BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB466DB-836F-4CBF-85D1-DEC168463BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB466DB-836F-4CBF-85D1-DEC168463BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB466DB-836F-4CBF-85D1-DEC168463BE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
